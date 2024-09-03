@@ -17,7 +17,8 @@ const TJMCalculator = () => {
 
   return (
     <div>
-      <h2>Calculateur de TJM</h2>
+      <h1 className='sectitle'>CALCULATEUR DE TJM</h1>
+      <hr></hr>
       <div>
         <label>Salaire Mensuel Souhaité (€) :</label>
         <input
@@ -50,11 +51,10 @@ const TJMCalculator = () => {
           onChange={(e) => setBillableDays(e.target.value)} // Met à jour l'état des jours facturables
         />
       </div>
-      <button onClick={handleCalculateTJM}>Calculer</button>
+      <button className='button-container' onClick={handleCalculateTJM}>Calculer</button>
       {tjm !== null && (
         <div>
           <h3>Votre TJM est de {tjm.toFixed(2)} €</h3> {/* Affiche le TJM calculé */}
-          <CurrencyConverter amount={tjm} /> {/* Passe le TJM au composant CurrencyConverter */}
         </div>
       )}
     </div>

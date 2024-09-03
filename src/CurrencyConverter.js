@@ -29,7 +29,8 @@ const CurrencyConverter = () => {
 
   return (
     <div>
-      <h2>Convertisseur de devises</h2>
+      <h2 className='sectitle'>CONVERTISSEUR DE DEVISES</h2>
+      <hr></hr>
       <div>
         <label>Montant :</label>
         <input
@@ -54,7 +55,7 @@ const CurrencyConverter = () => {
           <option value="USD">USD</option>
           <option value="EUR">EUR</option>
           <option value="GNF">GNF</option>
-          <option value="GNF">CFA</option>
+          <option value="XOF">CFA</option>
         </select>
       </div>
       <div>
