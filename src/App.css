@@ -48,6 +48,7 @@
   margin-top: 3%;
   margin-bottom: 100px;
   flex: 1; /* Prend l'espace restant pour pousser le pied de page en bas */
+  flex-wrap: wrap;
 }
 
 .block {
@@ -95,7 +96,34 @@ hr{
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: fixed; /* Fixe le pied de page en bas de l'écran */
+  position: fixed;
   bottom: 0;
-  left: 0; /* S'assure que le pied de page commence à gauche de l'écran */
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .block {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .button-container button {
+    width: 100%;
+    font-size: 18px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .block {
+    padding: 20px; 
+  }
+
+  .button-container button {
+    font-size: 16px;
+  }
 }
